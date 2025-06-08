@@ -28,8 +28,8 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             className="flex items-center space-x-3 cursor-pointer"
             onClick={() => setActiveSection('home')}
           >
-            <div className="w-10 h-10 bg-black rounded-xl flex items-center justify-center">
-              <Frame className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center">
+              <img src="/logo.png" alt="Luvan Logo" className="object-cover w-full h-full" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-black">Luvan</h1>
