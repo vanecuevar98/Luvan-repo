@@ -32,8 +32,8 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-5xl md:text-7xl font-light text-black mb-6"
             >
-              Arte y
-              <span className="block font-bold">Enmarcado</span>
+              Luvan
+              <span className="block font-bold">Arte y Enmarcado</span>
             </motion.h1>
             
             <motion.p
