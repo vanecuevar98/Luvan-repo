@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Frame } from 'lucide-react';
 
 interface NavigationProps {
   activeSection: string;
