@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Heart, ShoppingCart } from 'lucide-react';
 
 interface Product {
   id: number;
@@ -27,26 +26,6 @@ export default function ProductCard({ product }: ProductCardProps) {
           alt={product.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        
-        {/* Overlay Actions */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-          <div className="flex space-x-3">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow"
-            >
-              <Heart className="w-5 h-5 text-gray-700" />
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="bg-black rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow"
-            >
-              <ShoppingCart className="w-5 h-5 text-white" />
-            </motion.button>
-          </div>
-        </div>
 
         {/* Price Badge */}
         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">

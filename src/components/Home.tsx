@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Palette, Frame, Award } from 'lucide-react';
 
-export default function Home() {
+interface HomeProps {
+  setActiveSection: (section: string) => void;
+}
+
+export default function Home({ setActiveSection }: HomeProps) {
   const features = [
     {
       icon: Frame,
@@ -52,11 +56,17 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <button className="bg-black text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors flex items-center space-x-2 group">
+              <button 
+                onClick={() => setActiveSection('catalog')}
+                className="bg-black text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors flex items-center space-x-2 group"
+              >
                 <span>Ver Catálogo</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border border-gray-300 text-black px-8 py-4 rounded-2xl font-medium hover:border-black transition-colors">
+              <button 
+                onClick={() => setActiveSection('contact')}
+                className="border border-gray-300 text-black px-8 py-4 rounded-2xl font-medium hover:border-black transition-colors"
+              >
                 Contactar
               </button>
             </motion.div>
@@ -124,7 +134,10 @@ export default function Home() {
             <p className="text-xl text-gray-600 mb-8">
               Descubre nuestra amplia gama de productos y servicios
             </p>
-            <button className="bg-black text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors">
+            <button 
+              onClick={() => setActiveSection('catalog')}
+              className="bg-black text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors"
+            >
               Explorar Catálogo
             </button>
           </motion.div>
